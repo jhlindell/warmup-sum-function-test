@@ -14,5 +14,20 @@ describe ('Sum', function() {
       expect(sum()).to.equal(0);
       assert.equal(sum(),0);
     });
-    
+
+    it('Shoud return the sum of two paramaters.', function() {
+      expect(sum(1,2)).to.equal(3);
+    });
+
+    it('Should properly deal with a negative parameter.', function() {
+      expect(sum(2,-5)).to.equal(-3);
+    });
+
+    it('Should sum floating point numbers.', function() {
+      expect(sum(3.14, 5.63)).to.equal(8.77);
+    });
+
+    it('Should handle an array of numbers as an input.', function() {
+      expect(sum([1,2,3,4])).to.equal(10);
+    });
 });
